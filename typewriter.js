@@ -18,7 +18,7 @@ function typewrite() {
   } else {
     i = -1;
     document.querySelector(".typewritten").innerHTML = "";
-    setTimeout(typewrite, 1000);
+    setTimeout(typewrite, 2000);
     typewrite();
   }
 }
