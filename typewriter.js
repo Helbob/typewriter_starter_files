@@ -11,12 +11,14 @@ function init() {
 init();
 
 function typewrite() {
-  //setTimeout
   i++;
   if (i < text.length) {
     document.querySelector(".typewritten").innerHTML += text.charAt(i);
-    setTimeout(typewrite, 60);
+    setTimeout(typewrite, 1000);
+  } else {
+    i = -1;
+    document.querySelector(".typewritten").innerHTML = "";
+    setTimeout(typewrite, 1000);
+    typewrite();
   }
-
-  console.log("vi skriver");
 }
